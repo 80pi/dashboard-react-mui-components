@@ -10,7 +10,6 @@ import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import ListSubheader from '@mui/material/ListSubheader';
 
 const bull = (
     <Box component="span" sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}>
@@ -20,7 +19,7 @@ const bull = (
 
 export const mainListItems = (
     <React.Fragment>
-        <ListSubheader component="div" inset>MAIN MENU</ListSubheader>
+        <ListItemText primary="MAIN MENU" />
         <ListItemButton>
             <ListItemIcon>
                 <DashboardIcon />
@@ -50,7 +49,7 @@ export const mainListItems = (
 
 export const secondListItems = (
     <React.Fragment>
-        <ListSubheader component="div" inset>TEAMS</ListSubheader>
+        <ListItemText primary="TEAMS"/>
         <ListItemButton>
             <Typography variant="h6" component="div">{bull} Marketing</Typography>
         </ListItemButton>

@@ -124,8 +124,8 @@ export default function DashboardContent() {
                     </Toolbar>
                 </AppBar>
                 <Drawer variant="permanent" open={open}>
-                    <FitbitIcon />
-                    <Typography variant="h4" component="div">Veritas</Typography>
+                    
+                    <Typography variant="h4" component="div"><FitbitIcon sx={{ fontSize: 40 }}  />Veritas</Typography>
                     <Divider />
                     <List component="nav">
                         {mainListItems}
@@ -143,10 +143,10 @@ export default function DashboardContent() {
                                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 240, }}> <TeamPayments /> </Paper>
                             </Grid>
                             <Grid item xs={12} md={4} lg={3}>
-                                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 240, }}> <IncomeStatistics /> </Paper>
+                                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 240, }}> <Savings /> </Paper>
                             </Grid>
                             <Grid item xs={12} md={4} lg={3}>
-                                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 240, }}> <Savings /> </Paper>
+                                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 240, }}> <IncomeStatistics /> </Paper>
                             </Grid>
                             <Grid item xs={12} md={4} lg={3}>
                                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 240, }}> <BestPlan /> </Paper>
