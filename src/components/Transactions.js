@@ -3,8 +3,8 @@ import Link from "@mui/material/Link";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
-import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
+import TableHead from "@mui/material/TableHead";
 import Title from "./Title";
 // import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
@@ -13,14 +13,14 @@ import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import Stack from '@mui/material/Stack';
 
 // Generate Order Data
-function createData(id, reciever, Type, status, date, amount) {
-  return { id, reciever, Type, status, date, amount };
+function createData(id, reciever, Type, status, date, amount,image) {
+  return { id, reciever, Type, status, date, amount,image };
 }
 
 const rows = [
-  createData(0, "Emma Ryna Jr", "Salary", "Pending", "Feb 19th,2023", "$3,892"),
-  createData(1, "Adrian Daren", "Bonus", "Done", "Feb 18th,2023", "$1073"),
-  createData(2, "Roxanne Hills", "Salary", "Done", "April 16th,2023", "$2,790"),
+  createData(0, "Emma Ryna Jr", "Salary", "Pending", "Feb 19th,2023", "$3,892","/static/images/avatar/4.jpg"),
+  createData(1, "Adrian Daren", "Bonus", "Done", "Feb 18th,2023", "$1073","/static/images/avatar/5.jpg"),
+  createData(2, "Roxanne Hills", "Salary", "Done", "April 16th,2023", "$2,790","/static/images/avatar/2.jpg"),
 ];
 function preventDefault(event) {
   event.preventDefault();
@@ -47,7 +47,7 @@ export default function Transactions() {
               <TableCell align="left">
               <Stack direction="row">
               <CheckBoxOutlineBlankIcon fontSize="inherit" />
-                <Avatar alt="Remy Sharp" sx={{ width: 20, height: 20 }}/>
+                <Avatar alt="Remy Sharp" src={row.image}/>
                 {row.reciever}
               </Stack>
                 
@@ -55,7 +55,7 @@ export default function Transactions() {
               <TableCell>{row.Type}</TableCell>
               <TableCell>{row.status}</TableCell>
               <TableCell>{row.date}</TableCell>
-              <TableCell>{`$${row.amount}`}</TableCell>
+              <TableCell>{row.amount}</TableCell>
               <TableCell align="right">
                 <Button variant="outlined" size="small">
                   Details
